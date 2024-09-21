@@ -25,6 +25,7 @@ const userdb = require('../Model/usermodel')
 
 router.post('/signup', userController.user_sign_up);
 router.post('/login', userController.user_login );
+router.get('/', userController.getdata );
 
 router.get('/login/success', async (req, res) => {
     // console.log("User data:", req.user);
