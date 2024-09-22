@@ -18,10 +18,6 @@ const failureGoogleLogin = (req, res) => {
 
 // Email Singn Up / Login
 
-const getdata = async = (req,res) => {
-    res.render('auth')
-}
-
 const user_sign_up = async (req, res) => {
 
     let find_email = await usermodel.findOne({ email: req.body.email })
@@ -86,10 +82,12 @@ const user_login = async (req, res) => {
 };
 
 
+
+
+
 module.exports = {
     successGoogleLogin,
     failureGoogleLogin,
     user_login,
     user_sign_up,
-    getdata
 }

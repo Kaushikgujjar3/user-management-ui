@@ -18,6 +18,8 @@ app.set('view engine', 'jade');
 app.set('view engine', 'ejs');
 // app.set('view engine', 'pug');
 
+
+
 app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
@@ -26,9 +28,8 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use(cors());
 app.use(cors({
-  origin: '*', 
-  credentials: true,
-  methods:["POST","GET"]
+  origin: 'http://localhost:3000', // Replace with the frontend origin
+  credentials: true  // Allow cookies/session data
 }));
 
 app.use(session({
