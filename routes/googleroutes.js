@@ -8,7 +8,7 @@ router.use(cors())
 
 
 const corsOptions = {
-	origin: ['http://localhost:5000', 'http://localhost:3000'], // Add both client URLs
+	origin: ['http://localhost:5000', 'http://localhost:3000'], 
 	credentials: true,
 	optionsSuccessStatus: 200
   };
