@@ -10,7 +10,7 @@ const Header = () => {
   const UserData = async () => {
     let token = localStorage.getItem("token");
 
-    await axios.get('http://localhost:3000/validuser', {  
+    await axios.get('https://user-management-api-6d7w.onrender.com/validuser', {  
       headers: {
         "Content-Type": "application/json",
         "authorization": token
@@ -26,7 +26,7 @@ const Header = () => {
   };
 
   const getUserData = async () => {
-    await axios.get('http://localhost:3000/login/success', { withCredentials: true })
+    await axios.get('https://user-management-api-6d7w.onrender.com/login/success', { withCredentials: true })
       .then(response => {
         console.log(response);
         setUserdata(response.data.user);
@@ -46,7 +46,7 @@ const Header = () => {
   }, []);
 
   const logout = () => {
-    window.open("http://localhost:3000/logout", "_self")
+    window.open("https://user-management-api-6d7w.onrender.com/logout", "_self")
   }
 
   return (
