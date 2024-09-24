@@ -25,7 +25,7 @@ const Signup = () => {
     const changedata = async (data) => {
 
         try {
-            await axios.post('https://user-management-api-zszn.onrender.com/signup', data)
+            await axios.post('https://user-management-api-ok62.onrender.com/signup', data)
 
                 .then(response => {
                     console.log(response);
@@ -50,7 +50,7 @@ const Signup = () => {
     };
 
     const loginWithGoogle = () => {
-        window.open("https://user-management-api-zszn.onrender.com/auth/google/callback", "_self")
+        window.open("https://user-management-api-ok62.onrender.com/auth/google/callback", "_self")
     }
 
     const {

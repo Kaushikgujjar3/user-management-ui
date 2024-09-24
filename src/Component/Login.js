@@ -20,7 +20,7 @@ function Login() {
     // Google Login
 
     const loginWithGoogle = () => {
-        window.open("https://user-management-api-zszn.onrender.com/auth/google/callback", "_self")
+        window.open("https://user-management-api-ok62.onrender.com/auth/google/callback", "_self")
     }
 
     const {
@@ -42,7 +42,7 @@ function Login() {
 
     const changedata = async (data) => {
         try {
-            await axios.post('https://user-management-api-zszn.onrender.com/login', data)
+            await axios.post('https://user-management-api-ok62.onrender.com/login', data)
                 .then(response => {
                     if (response.status === 200) {
                         localStorage.setItem("token", response.data.token);

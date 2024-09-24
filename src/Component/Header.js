@@ -10,7 +10,7 @@ const Header = () => {
   const UserData = async () => {
     let token = localStorage.getItem("token");
 
-    await axios.get('https://user-management-api-zszn.onrender.com/validuser', {  
+    await axios.get('https://user-management-api-ok62.onrender.com/validuser', {  
       headers: {
         "Content-Type": "application/json",
         "authorization": token
@@ -26,7 +26,7 @@ const Header = () => {
   };
 
   const getUserData = async () => {
-    await axios.get('https://user-management-api-zszn.onrender.com/login/success', { withCredentials: true })
+    await axios.get('https://user-management-api-ok62.onrender.com/login/success', { withCredentials: true })
       .then(response => {
         console.log(response);
         setUserdata(response.data.user);
@@ -47,7 +47,7 @@ const Header = () => {
 
   const logout = () => {
     localStorage.removeItem("token");
-    window.open("https://user-management-api-zszn.onrender.com/logout", "_self")
+    window.open("https://user-management-api-ok62.onrender.com/logout", "_self")
   }
 
   return (
