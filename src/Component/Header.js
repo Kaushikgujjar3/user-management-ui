@@ -40,7 +40,7 @@ const Header = () => {
         console.log(error);
       });
   };
-
+      
   useEffect(() => {
     const fetchData = async () => {
       await getUserData();
