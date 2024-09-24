@@ -10,11 +10,7 @@ const Header = () => {
   const UserData = async () => {
     let token = localStorage.getItem("token");
 
-<<<<<<< HEAD
     await axios.get('https://user-management-api-zszn.onrender.com/validuser', {  
-=======
-    await axios.get('https://user-management-api-dhx7.onrender.com/validuser', {  
->>>>>>> cd145c007d6598f30f787c175889c56d92770c22
       headers: {
         "Content-Type": "application/json",
         "authorization": token
@@ -30,11 +26,7 @@ const Header = () => {
   };
 
   const getUserData = async () => {
-<<<<<<< HEAD
     await axios.get('https://user-management-api-zszn.onrender.com/login/success', { withCredentials: true })
-=======
-    await axios.get('https://user-management-api-dhx7.onrender.com/login/success', { withCredentials: true })
->>>>>>> cd145c007d6598f30f787c175889c56d92770c22
       .then(response => {
         console.log(response);
         setUserdata(response.data.user);
@@ -54,12 +46,8 @@ const Header = () => {
   }, []);
 
   const logout = () => {
-<<<<<<< HEAD
     localStorage.removeItem("token");
     window.open("https://user-management-api-zszn.onrender.com/logout", "_self")
-=======
-    window.open("https://user-management-api-dhx7.onrender.com/logout", "_self")
->>>>>>> cd145c007d6598f30f787c175889c56d92770c22
   }
 
   return (

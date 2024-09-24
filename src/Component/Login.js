@@ -20,11 +20,7 @@ function Login() {
     // Google Login
 
     const loginWithGoogle = () => {
-<<<<<<< HEAD
         window.open("https://user-management-api-zszn.onrender.com/auth/google/callback", "_self")
-=======
-        window.open("https://user-management-api-dhx7.onrender.com/auth/google/callback", "_self")
->>>>>>> cd145c007d6598f30f787c175889c56d92770c22
     }
 
     const {
@@ -46,11 +42,7 @@ function Login() {
 
     const changedata = async (data) => {
         try {
-<<<<<<< HEAD
             await axios.post('https://user-management-api-zszn.onrender.com/login', data)
-=======
-            await axios.post('https://user-management-api-dhx7.onrender.com/login', data)
->>>>>>> cd145c007d6598f30f787c175889c56d92770c22
                 .then(response => {
                     if (response.status === 200) {
                         localStorage.setItem("token", response.data.token);
@@ -61,7 +53,7 @@ function Login() {
                     }
                 })
                 .catch(error => {
-                    if (error.response && error.response.status === 401) {  
+                    if (error.response && error.response.status === 401) {
                         toast.error("Incorrect Password ! ", {
                             position: "top-center"
                         });
