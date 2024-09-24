@@ -25,7 +25,11 @@ const Signup = () => {
     const changedata = async (data) => {
 
         try {
+<<<<<<< HEAD
             await axios.post('https://user-management-api-zszn.onrender.com/signup', data)
+=======
+            await axios.post('https://user-management-api-dhx7.onrender.com/signup', data)
+>>>>>>> cd145c007d6598f30f787c175889c56d92770c22
 
                 .then(response => {
                     console.log(response);
@@ -50,7 +54,11 @@ const Signup = () => {
     };
 
     const loginWithGoogle = () => {
+<<<<<<< HEAD
         window.open("https://user-management-api-zszn.onrender.com/auth/google/callback", "_self")
+=======
+        window.open("https://user-management-api-dhx7.onrender.com/auth/google/callback", "_self")
+>>>>>>> cd145c007d6598f30f787c175889c56d92770c22
     }
 
     const {
