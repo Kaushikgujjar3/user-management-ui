@@ -10,7 +10,7 @@ const Header = () => {
   const UserData = async () => {
     let token = localStorage.getItem("token");
 
-    await axios.get('https://user-management-api-ok62.onrender.com/validuser', {  
+    await axios.get('https://user-management-api-ok62.onrender.com/validuser', {
       headers: {
         "Content-Type": "application/json",
         "authorization": token
@@ -26,14 +26,19 @@ const Header = () => {
   };
 
   const getUserData = async () => {
-    await axios.get('https://user-management-api-ok62.onrender.com/login/success', { withCredentials: true })
+    await axios.get('https://user-management-api-ok62.onrender.com/login/success', {
+      withCredentials: true, 
+      headers: {
+        'Content-Type': 'application/json',
+      }
+    })
       .then(response => {
         console.log(response);
         setUserdata(response.data.user);
       })
       .catch(error => {
         console.log(error);
-      }); 
+      });
   };
 
   useEffect(() => {
