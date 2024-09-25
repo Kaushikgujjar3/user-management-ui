@@ -37,7 +37,18 @@ const Header = () => {
         setUserdata(response.data.user);
       })
       .catch(error => {
-        console.log(error);
+        if (error.response) {
+          // Server responded with a status code outside 2xx
+          console.log("Response data:", error.response.data);
+          console.log("Response status:", error.response.status);
+          console.log("Response headers:", error.response.headers);
+        } else if (error.request) {
+          // Request made but no response received
+          console.log("No response:", error.request);
+        } else {
+          // Something happened in setting up the request
+          console.log("Error:", error.message);
+        }
       });
   };
       
