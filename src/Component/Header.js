@@ -26,18 +26,14 @@ const Header = () => {
   };
 
   const getUserData = async () => {
-    await axios.get('https://user-management-api-ok62.onrender.com/login/success', {
-      headers: {
-        'Content-Type': 'application/json',
-      }
-    })
+    await axios.get('https://user-management-api-ok62.onrender.com/login/success', { withCredentials: true })
       .then(response => {
         console.log(response);
         setUserdata(response.data.user);
       })
       .catch(error => {
         console.log(error);
-      });
+      }); 
   };
       
   useEffect(() => {
