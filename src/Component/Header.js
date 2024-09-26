@@ -33,9 +33,9 @@ const Header = () => {
       })
       .catch(error => {
         console.log(error);
-      }); 
-  };
-      
+      });
+  };  
+
   useEffect(() => {
     const fetchData = async () => {
       await getUserData();
@@ -73,7 +73,7 @@ const Header = () => {
           </div>
         </header>
       ) : (
-        Object.keys(userdata1).length > 0 && (
+        Object.keys(userdata1).length > 0 (
           <header className="header">
             <div className="div-name">Mr. {userdata1.displayName}</div>
             <div className="div">
