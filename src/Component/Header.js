@@ -26,15 +26,20 @@ const Header = () => {
   };
 
   const getUserData = async () => {
-    await axios.get('https://user-management-api-ok62.onrender.com/successlogin', { withCredentials: true })
+
+    await axios.get('https://user-management-api-ok62.onrender.com/successlogin', {
+      headers: {
+        "Content-Type": "application/json",
+      }
+    })
       .then(response => {
-        console.log(response);
-        setUserdata(response.data.user);
+        console.log(response.data);
+        setUserdata1(response.data.ValidUserOne);
       })
       .catch(error => {
         console.log(error);
       });
-  };  
+  };
 
   useEffect(() => {
     const fetchData = async () => {
@@ -73,7 +78,7 @@ const Header = () => {
           </div>
         </header>
       ) : (
-        Object.keys(userdata1).length > 0 (
+        Object.keys(userdata1).length > 0(
           <header className="header">
             <div className="div-name">Mr. {userdata1.displayName}</div>
             <div className="div">
