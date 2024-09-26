@@ -26,7 +26,7 @@ const Signup = () => {
 
         try {
             await axios.post('https://user-management-api-ok62.onrender.com/signup', data)
-
+            
                 .then(response => {
                     console.log(response);
                     if (response.status === 200) {

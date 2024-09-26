@@ -28,9 +28,6 @@ const Header = () => {
   const getUserData = async () => {
 
     await axios.get('https://user-management-api-ok62.onrender.com/successlogin', {
-      headers: {
-        "Content-Type": "application/json",
-      }
     })
       .then(response => {
         console.log(response.data);
