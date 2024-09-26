@@ -26,7 +26,7 @@ const Header = () => {
   };
 
   const getUserData = async () => {
-    await axios.get('https://user-management-api-ok62.onrender.com/login/success', { withCredentials: true })
+    await axios.get('https://user-management-api-ok62.onrender.com/successlogin', { withCredentials: true })
       .then(response => {
         console.log(response);
         setUserdata(response.data.user);
