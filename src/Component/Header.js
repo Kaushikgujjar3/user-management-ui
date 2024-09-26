@@ -34,7 +34,7 @@ const Header = () => {
     })
       .then(response => {
         console.log(response.data);
-        setUserdata1(response.data.ValidUserOne);
+        setUserdata(response.data.user);
       })
       .catch(error => {
         console.log(error);
